@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حجز المواعيد</title>
+    <title>KAIZEN - حجز المواعيد</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,6 +17,30 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: inline-block;
+            width: 80%;
+            max-width: 600px;
+        }
+        .service-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
         .btn {
             display: inline-block;
@@ -36,10 +60,40 @@
 </head>
 <body>
     <div class="container">
-        <h1>حجز المواعيد</h1>
-        <p>انقر على الزر أدناه لحجز موعدك:</p>
-        <a href="https://bookings.zoho.eu/#/app/appointments/list/month/May-2024" class="btn" target="_blank">احجز موعدك الآن</a>
+        <h1>KAIZEN - حجز المواعيد</h1>
+        <img src="service-image.jpg" alt="خدمتنا" class="service-image">
+        <form>
+            <div class="form-group">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="country-code">رمز الدولة:</label>
+                <select id="country-code" name="country-code" required>
+                    <option value="+1">+1 الولايات المتحدة</option>
+                    <option value="+44">+44 المملكة المتحدة</option>
+                    <option value="+971">+971 الإمارات العربية المتحدة</option>
+                    <!-- أضف المزيد من رموز الدول حسب الحاجة -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="appointment-date">تاريخ الموعد:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+            </div>
+            <div class="form-group">
+                <label for="appointment-time">وقت الموعد:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+            </div>
+            <button type="submit" class="btn">احجز الآن</button>
+        </form>
     </div>
 </body>
 </html>
-
